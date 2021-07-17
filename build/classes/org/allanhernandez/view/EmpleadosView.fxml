@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="631.0" prefWidth="1125.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.allanhernandez.controler.EmpleadoController">
+   <children>
+      <ImageView fitHeight="653.0" fitWidth="1126.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../image/Fondot.jpg" />
+         </image>
+      </ImageView>
+      <Label layoutX="440.0" layoutY="14.0" text="Empleados" textFill="#0045a1">
+         <font>
+            <Font name="Comic Sans MS" size="51.0" />
+         </font>
+         <effect>
+            <DropShadow />
+         </effect>
+      </Label>
+      <Label layoutX="525.0" layoutY="185.0" text="Apellidos " textFill="#006aa0">
+         <font>
+            <Font name="Footlight MT Light" size="28.0" />
+         </font>
+         <effect>
+            <DropShadow />
+         </effect>
+      </Label>
+      <ComboBox fx:id="cmbCodTipoEmpleado" layoutX="251.0" layoutY="304.0" prefWidth="150.0" />
+      <Label layoutX="14.0" layoutY="185.0" text="Nombres" textFill="#006aa0">
+         <font>
+            <Font name="Footlight MT Light" size="28.0" />
+         </font>
+         <effect>
+            <DropShadow />
+         </effect>
+      </Label>
+      <Label layoutX="525.0" layoutY="240.0" text="Teléfono" textFill="#006aa0">
+         <font>
+            <Font name="Footlight MT Light" size="28.0" />
+         </font>
+         <effect>
+            <DropShadow />
+         </effect>
+      </Label>
+      <Label fx:id="lblCodEmpleado" layoutX="14.0" layoutY="85.0" text="Código Empleado" textFill="#006aa0">
+         <font>
+            <Font name="Footlight MT Light" size="25.0" />
+         </font>
+         <effect>
+            <DropShadow />
+         </effect>
+      </Label>
+      <Label layoutX="14.0" layoutY="242.0" text="Grado cocinero" textFill="#006aa0">
+         <font>
+            <Font name="Footlight MT Light" size="25.0" />
+         </font>
+         <effect>
+            <DropShadow />
+         </effect>
+      </Label>
+      <Label layoutX="14.0" layoutY="132.0" text="Número Empleado" textFill="#006aa0">
+         <font>
+            <Font name="Footlight MT Light" size="25.0" />
+         </font>
+         <effect>
+            <DropShadow />
+         </effect>
+      </Label>
+      <Label layoutX="14.0" layoutY="302.0" text="Código tipo empleado" textFill="#006aa0">
+         <font>
+            <Font name="Footlight MT Light" size="25.0" />
+         </font>
+         <effect>
+            <DropShadow />
+         </effect>
+      </Label>
+      <Label layoutX="525.0" layoutY="130.0" text="Dirección" textFill="#006aa0">
+         <font>
+            <Font name="Footlight MT Light" size="28.0" />
+         </font>
+         <effect>
+            <DropShadow />
+         </effect>
+      </Label>
+      <TableView fx:id="tblEmpleados" layoutX="17.0" layoutY="353.0" onKeyReleased="#seleccionarElemento" onMouseClicked="#seleccionarElemento" prefHeight="200.0" prefWidth="1090.0">
+        <columns>
+          <TableColumn fx:id="colCodEmpleado" prefWidth="102.0" text="Cód. Empleado" />
+          <TableColumn fx:id="colNumEmpleado" prefWidth="108.0" text="Núm. Empleado" />
+            <TableColumn fx:id="colNombres" prefWidth="149.0" text="Nombres" />
+            <TableColumn fx:id="colApellidos" minWidth="0.0" prefWidth="146.0" text="Apellidos" />
+            <TableColumn fx:id="colTelefono" prefWidth="113.0" text="Teléfono" />
+            <TableColumn fx:id="colDireccion" prefWidth="182.0" text="Dirección" />
+            <TableColumn fx:id="colGradoCocinero" prefWidth="167.0" text="Grado Cocinero" />
+            <TableColumn fx:id="colCodTipoEmpleado" prefWidth="122.0" text="Cód. Tipo Empleado" />
+        </columns>
+         <effect>
+            <DropShadow />
+         </effect>
+      </TableView>
+      <TextField fx:id="txtCodEmpleado" editable="false" layoutX="205.0" layoutY="87.0" />
+      <TextField fx:id="txtNumEmpleado" editable="false" layoutX="216.0" layoutY="134.0" />
+      <TextField fx:id="txtNombres" editable="false" layoutX="131.0" layoutY="189.0" prefHeight="25.0" prefWidth="249.0" />
+      <TextField fx:id="txtDireccion" editable="false" layoutX="653.0" layoutY="134.0" prefHeight="25.0" prefWidth="249.0" />
+      <TextField fx:id="txtGradoCocinero" editable="false" layoutX="193.0" layoutY="244.0" prefHeight="25.0" prefWidth="191.0" />
+      <TextField fx:id="txtApellidos" editable="false" layoutX="638.0" layoutY="189.0" prefHeight="25.0" prefWidth="249.0" />
+      <TextField fx:id="txtTelefono" editable="false" layoutX="638.0" layoutY="244.0" prefHeight="25.0" prefWidth="249.0" />
+      <Button fx:id="btnNuevo" layoutX="17.0" layoutY="575.0" mnemonicParsing="false" onAction="#nuevo" prefHeight="42.0" prefWidth="90.0" text="Nuevo" />
+      <Button fx:id="btnReporte" layoutX="408.0" layoutY="575.0" mnemonicParsing="false" onAction="#reporte" prefHeight="42.0" prefWidth="90.0" text="Reporte" />
+      <Button fx:id="btnEditar" layoutX="280.0" layoutY="575.0" mnemonicParsing="false" onAction="#editar" prefHeight="42.0" prefWidth="90.0" text="Editar" />
+      <Button fx:id="btnEliminar" layoutX="148.0" layoutY="575.0" mnemonicParsing="false" onAction="#eliminar" prefHeight="42.0" prefWidth="90.0" text="Eliminar" />
+      <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="953.0" onMouseClicked="#TipoDeEmpleadoVen" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../image/transparent-man-icon-employees-icon-human-resources-icon-5d8e689f9ea234.2417336415696139836498.png" />
+         </image>
+      </ImageView>
+   </children>
+</AnchorPane>
